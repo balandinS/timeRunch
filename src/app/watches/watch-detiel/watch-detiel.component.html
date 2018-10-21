@@ -1,17 +1,17 @@
-<div class="container text-black">
+<div class="container text-black  animated fadeIn">
     <nav class="breadcrumb">
         <a class="breadcrumb-item text-red" routerLink="">Home</a>
         <a class="breadcrumb-item text-red" routerLink="/products">List</a>
       </nav>
   <div class="row justify-content-center">
     <div class="col-sm-5 col-md-5">
-      <img class="img-thumbnail my-2 animated fadeIn " src="https://images-na.ssl-images-amazon.com/images/I/61L9tQihCNL._UX679_.jpg"
-        alt="watch">
+      <img class="img-thumbnail my-2" [src]="watch.img.src" alt="watch">
     </div>
     <!--col[0]-->
-    <div class="col-sm-5 col-md-5 animated fadeIn" >
+    <div class="col-sm-5 col-md-5" >
       <h1>Deteils about watch</h1>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis.</p>
+      <p>Lorem ipsum dolo
+       sit, amet consectetur adipisicing elit. Corporis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis.</p>
       <div class="row justify-content-between">
@@ -23,6 +23,20 @@
     <!--col-md[1]-->
   </div>
   <!--row-->
+  <div class="row w-50 p-4 justify-content-center">
+      <div class="col-sm-3 col-md-3">
+       <img (click)="show()" class="img-thumbnail my-2 rakurs" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhOQeq4DgxxNhzxci3Hk-7lf_e3mlWYMAc2hW-ULiOX21wDueX"
+        alt="watch">
+      </div>
+      <div class="col-sm-3 col-md-3">
+          <img class="img-thumbnail my-2 rakurs" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2OYYRhi4LfRjpdfSKtLwuiNML1tVkh4uMkgPjj4FGOZMNyh37"
+          alt="watch">
+        </div>
+        <div class="col-sm-3 col-md-3">
+            <img class="img-thumbnail my-2 rakurs" src="https://cdn.idealo.com/folder/Product/4161/1/4161102/s4_produktbild_gross/fossil-townsman-me1138.jpg"
+            alt="watch">
+          </div>
+  </div>
 <hr>
 <div class="row justify-content-between mx-3">
   <div class="col-sm-6 col-md-6 animated fadeIn">

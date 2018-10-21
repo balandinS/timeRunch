@@ -8,12 +8,16 @@ export class WatchModel {
     private price: number;
     private allowPrice: boolean;
     private description: string;
+    public img: {
+        src: string, src1: string, src2: string 
+    };
     private improtantDetails : {
         gender: string,
         movement: string,
         caseMarerail: string,
         caseDaimeter: number,
-        year: number
+        year: number,
+        
     }
 
     constructor(
@@ -22,7 +26,10 @@ export class WatchModel {
         model:string,
         condition: string,
         scopeDelivery:string,
-        price: number
+        price: number,
+        img: {
+            src: string, src1: string, src2: string 
+        }
         ) 
         {
         this.typeWatch = typeWatch;
@@ -31,5 +38,6 @@ export class WatchModel {
         this.condition = condition;
         this.scopeDelivery = scopeDelivery;
         this.price = price; 
+        this.img = img;
     }
 }

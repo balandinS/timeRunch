@@ -14,41 +14,13 @@ export class WatchesService {
       '830437',
       'condtion',
       'silver case',
-      12
-    ),
-    new WatchModel(
-     'Eligant',
-     'Armanani',
-     '4432',
-     'condtion',
-     'box',
-     12
-   ),
-   new WatchModel(
-     'A',
-     'hot',
-     'best',
-     'condtion',
-     'box',
-     12
-   ),
-   new WatchModel(
-     'A',
-     'hot',
-     'best',
-     'condtion',
-     'box',
-     12
-   ),
-   new WatchModel(
-     'A',
-     'hot',
-     'best',
-     'condtion',
-     'box',
-     12
-   ),
-
+      100,
+      {
+        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhOQeq4DgxxNhzxci3Hk-7lf_e3mlWYMAc2hW-ULiOX21wDueX",
+        src1: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2OYYRhi4LfRjpdfSKtLwuiNML1tVkh4uMkgPjj4FGOZMNyh37",
+        src2: "https://cdn.idealo.com/folder/Product/4161/1/4161102/s4_produktbild_gross/fossil-townsman-me1138.jpg"
+      }
+    )
   ]
 
   constructor() { }
