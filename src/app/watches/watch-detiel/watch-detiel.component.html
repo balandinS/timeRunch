@@ -5,7 +5,7 @@
       </nav>
   <div class="row justify-content-center">
     <div class="col-sm-5 col-md-5">
-      <img class="img-thumbnail my-2" [src]="watch.img.src" alt="watch">
+      <img #title class="img-thumbnail my-2" [src]="watch.img.src" alt="watch">
     </div>
     <!--col[0]-->
     <div class="col-sm-5 col-md-5" >
@@ -23,23 +23,23 @@
     <!--col-md[1]-->
   </div>
   <!--row-->
-  <div class="row w-50 p-4 justify-content-center">
-      <div class="col-sm-3 col-md-3">
-       <img (click)="show()" class="img-thumbnail my-2 rakurs" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhOQeq4DgxxNhzxci3Hk-7lf_e3mlWYMAc2hW-ULiOX21wDueX"
-        alt="watch">
+  <div class="cotnainer w-75 p-4">
+  
+  <div class="row justify-content-start ">
+      <div class="col-sm-2 col-md-2">
+       <img  #img (click)="show(img)" class="img-thumbnail my-2 rakurs" [src]="watch.img.src" alt="watch">
       </div>
-      <div class="col-sm-3 col-md-3">
-          <img class="img-thumbnail my-2 rakurs" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2OYYRhi4LfRjpdfSKtLwuiNML1tVkh4uMkgPjj4FGOZMNyh37"
-          alt="watch">
+      <div class="col-sm-2 col-md-2">
+          <img  #img1 (click)="show(img1)" class="img-thumbnail my-2 rakurs" [src]="watch.img.src1" alt="watch" >
         </div>
-        <div class="col-sm-3 col-md-3">
-            <img class="img-thumbnail my-2 rakurs" src="https://cdn.idealo.com/folder/Product/4161/1/4161102/s4_produktbild_gross/fossil-townsman-me1138.jpg"
-            alt="watch">
+        <div class="col-sm-2 col-md-2">
+            <img  #img2 (click)="show(img2)" class="img-thumbnail my-2 rakurs" [src]="watch.img.src2" alt="watch">
           </div>
   </div>
+</div>
 <hr>
 <div class="row justify-content-between mx-3">
-  <div class="col-sm-6 col-md-6 animated fadeIn">
+  <div class="col-sm-4 col-md-4 animated fadeIn">
     <h1>Deteils about watch</h1>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis.</p>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis.</p>
