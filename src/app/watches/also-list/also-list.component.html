@@ -1,0 +1,12 @@
+<div class="container">
+    <h1>Also Watches:</h1>
+  <div class="d-flex justify-content-around w-50 p-3">
+
+<app-also-list-item *ngFor="let watch of watches; let i = index "
+[watch]="watch"
+[index]="i"
+>
+</app-also-list-item>
+</div>
+</div>
+<br>

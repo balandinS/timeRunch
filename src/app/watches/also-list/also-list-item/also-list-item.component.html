@@ -1,0 +1,21 @@
+
+   <!-- Card -->
+<mdb-card>
+  <div class="view rgba-white-slight waves-light" mdbWavesEffect>
+    <!-- Card img -->
+    <mdb-card-img [src]="watch.img.src" alt="Card image cap"></mdb-card-img>
+    <a> <div class="mask"></div> </a>
+  </div>
+  <!--Card content-->
+  <mdb-card-body>
+    <!--Title-->
+    <mdb-card-title> <h4>{{watch.model}}</h4> </mdb-card-title>
+
+    <!--Text-->
+    <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's content. </mdb-card-text>
+
+    <button (click)="detiel()" class="btn btn-primary waves-light" mdbWavesEffect>Load</button>
+  </mdb-card-body>
+</mdb-card>
+
+<!--Card-->
