@@ -4,12 +4,20 @@
       </nav>
     <section class="text-center my-3">
   <div class="row">
-    <div class="col-sm-5 col-md-4 my-2"  *ngFor="let watch of watches; let i = index">
+    <div class="col-sm-5 col-md-4 my-2"  *ngFor="let watch of watches | slice:0:endPoint; 
+        let i = index; 
+       ">
         <app-watches-item
         [watch]="watch"
         [index]="i"
         ></app-watches-item>
     </div>
+  
   </div>
+   <div class="row">
+    <div class="col-sm-12 col-md-12 my-2">
+      <button (click)="loadRow()" [hidden]="load" mdbBtn type="button" color="danger" outline="true" mdbWavesEffect>Load More</button>
+    </div>
+   </div>
     </section>
 </div>
