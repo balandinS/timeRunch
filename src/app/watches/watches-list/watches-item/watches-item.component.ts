@@ -21,7 +21,7 @@ export class WatchesItemComponent implements OnInit {
   }
 
   detiel() {
-   this.router.navigate([this.index], {relativeTo: this.route})
+   this.router.navigate(['../',this.index], {relativeTo: this.route})
   }
 
 }

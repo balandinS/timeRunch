@@ -6,11 +6,13 @@ import { WatchesListComponent } from "../watches-list/watches-list.component"
 import { WatchDetielComponent } from "../watch-detiel/watch-detiel.component";
 
 const watchroutes: Routes = [
-  {path: 'products', component: WatchesComponent, children:[
-  {path: '', component: WatchesListComponent},
+  {path: 'wathces', component: WatchesComponent, children:[
+  {path: 'all', component: WatchesListComponent},
+  {path: 'brands', component: WatchesListComponent},
+  {path: 'accessories', component: WatchesListComponent},
   {path: ':id', component: WatchDetielComponent}
-
-]}
+ 
+]},
 ] 
 
 @NgModule({
