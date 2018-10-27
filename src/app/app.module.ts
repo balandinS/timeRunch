@@ -8,6 +8,7 @@ import { WatchesModule } from './watches/watchesModule/watches.module';
 import { AppRouterModule } from './appRoute.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent

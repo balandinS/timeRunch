@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../header/header.component';
-import { NavbarModule, WavesModule, IconsModule, ButtonsModule } from 'angular-bootstrap-md'
+import { NavbarModule, WavesModule, IconsModule, ButtonsModule, CarouselModule,CardsFreeModule } from 'angular-bootstrap-md'
 import { HomeComponent } from '../home/home.component';
 import { FooterComponent } from '../footer/footer.component';
 import { RouterModule } from '@angular/router';
+
+
+
 
 @NgModule({
   imports: [
@@ -13,7 +16,9 @@ import { RouterModule } from '@angular/router';
     NavbarModule,
     WavesModule,
     IconsModule,
-    ButtonsModule
+    ButtonsModule,
+    CarouselModule,
+    CardsFreeModule
    
   ],
   declarations: [HeaderComponent, HomeComponent, FooterComponent],

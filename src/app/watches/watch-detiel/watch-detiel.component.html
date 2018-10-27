@@ -4,8 +4,39 @@
         <a class="breadcrumb-item text-red" routerLink="/products">List</a>
       </nav>
   <div class="row justify-content-center">
-    <div class="col-sm-5 col-md-5">
-      <img #title class="img-thumbnail my-2" [src]="watch.img.src" alt="watch">
+    <div id="First" class="col-sm-5 col-md-5">
+        <mdb-carousel [isControls]="true" class="carousel slide carousel-fade" [animation]="'fade'">
+            <!--First slide-->
+            <mdb-carousel-item>
+              <div class="view w-100">
+                <img class="d-block w-100" [src]="watch.img.src" alt="First slide">
+                <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
+              </div>
+              <div class="carousel-caption">
+              </div>
+            </mdb-carousel-item>
+            <!--/First slide-->
+            <!--Second slide-->
+            <mdb-carousel-item>
+              <div class="view w-100">
+                <img class="d-block w-100" [src]="watch.img.src1" alt="Second slide">
+                <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
+              </div>
+              <div class="carousel-caption text-black">
+              </div>
+            </mdb-carousel-item>
+            <!--/Second slide-->
+            <!--Third slide-->
+            <mdb-carousel-item>
+              <div class="view w-100">
+                <img class="d-block w-100" [src]="watch.img.src2" alt="Third slide">
+                <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
+              </div>
+              <div class="carousel-caption">
+              </div>
+            </mdb-carousel-item>
+            <!--/Third slide-->
+          </mdb-carousel>
     </div>
     <!--col[0]-->
     <div class="col-sm-5 col-md-5" >
@@ -16,27 +47,13 @@
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis.</p>
       <div class="row justify-content-between">
           <h3 class="align-self-end">Price 100$</h3>
-          <a mdbBtn role="button" color="default" size="lg" mdbWavesEffect>Link for buy</a>
+          <a mdbBtn role="button" color="red" size="lg" mdbWavesEffect>Link for buy</a>
       </div>
       <!--row-->
     </div>
     <!--col-md[1]-->
   </div>
   <!--row-->
-  <div class="cotnainer w-75 p-4">
-  
-  <div class="row justify-content-start ">
-      <div class="col-sm-2 col-md-2">
-       <img  #img (click)="show(img)" class="img-thumbnail my-2 rakurs" [src]="watch.img.src" alt="watch">
-      </div>
-      <div class="col-sm-2 col-md-2">
-          <img  #img1 (click)="show(img1)" class="img-thumbnail my-2 rakurs" [src]="watch.img.src1" alt="watch" >
-        </div>
-        <div class="col-sm-2 col-md-2">
-            <img  #img2 (click)="show(img2)" class="img-thumbnail my-2 rakurs" [src]="watch.img.src2" alt="watch">
-          </div>
-  </div>
-</div>
 <hr>
 <div class="row justify-content-between mx-3">
   <div class="col-sm-4 col-md-4 animated fadeIn">

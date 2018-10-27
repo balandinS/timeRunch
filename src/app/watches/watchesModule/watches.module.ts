@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { WavesModule, ButtonsModule, CardsFreeModule } from 'angular-bootstrap-md'
+import { WavesModule, ButtonsModule, CardsFreeModule, CarouselModule, NavbarModule, DropdownModule } from 'angular-bootstrap-md'
 import { WatchesComponent } from '../watches.component';
 import { WatchesListComponent } from '../watches-list/watches-list.component';
 import { WatchesItemComponent } from '../watches-list/watches-item/watches-item.component';
@@ -17,8 +17,10 @@ import { AlsoListItemComponent } from '../also-list/also-list-item/also-list-ite
     WavesModule,
     WatchesRoutingModule,
     ButtonsModule,
-    CardsFreeModule
-    
+    CardsFreeModule,
+    CarouselModule,
+    NavbarModule,
+    DropdownModule
   ],
   declarations: [
     WatchesComponent,
@@ -27,6 +29,7 @@ import { AlsoListItemComponent } from '../also-list/also-list-item/also-list-ite
     WatchDetielComponent,
     AlsoListComponent,
     AlsoListItemComponent
+   
   ],
   providers: [ 
     WatchesService
