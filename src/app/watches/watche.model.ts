@@ -1,13 +1,13 @@
 export class WatchModel {
-    private  typeWatch: string;
-    private brand: string;
-    private model: string;
-    private referenceNUmber: number;
-    private condition: string;
-    private scopeDelivery : string;
-    private price: number;
-    private allowPrice: boolean;
-    private description: string;
+    public  typeWatch: string;
+    public brand: string;
+    public model: string;
+    public referenceNUmber: number;
+    public condition: string;
+    public scopeDelivery : string;
+    public price: number;
+    public allowPrice: boolean;
+    public description: string;
     public img: {
         src: string, src1: string, src2: string 
     };

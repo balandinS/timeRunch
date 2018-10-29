@@ -9,24 +9,21 @@
       <!--col-->
       <ul class="nav justify-content-center red lighten-1 py-3 ">
         <li class="nav-item">
-          <a class="nav-link text-white" routerLink="watches">All Watches</a>
+          <a class="nav-link text-white" [routerLink]="[ '/watches', 'all' ]">All Watches</a>
         </li>
         <li class="nav-item dropdown text-white" dropdown>
             <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
             Brands<span class="caret"></span></a>
             <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-                <a class="dropdown-item waves-light" mdbWavesEffect href="#">Action</a>
-                <a class="dropdown-item waves-light" mdbWavesEffect href="#">Another action</a>
-                <a class="dropdown-item waves-light" mdbWavesEffect href="#">Something else here</a>
-                <div class="divider dropdown-divider"></div>
-                <a class="dropdown-item waves-light" mdbWavesEffect href="#">Separated link</a>
-            </div>
+              <a [routerLink]="[ '/watches', 'swatch' ]"> <img style="width:20%;" src="data:image/jpeg;base64,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" class="rounded-circle"></a>
+              <a [routerLink]="[ '/watches', 'ap' ]"> <img style="width:20%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv1u2X0dqGjQKIqCtJiS6_SSQ8bfoZekZrEJPNnhAGTXwKuDeK" class="rounded-circle"></a>   
+              </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" routerLink="watches">Second Hand</a>
+          <a class="nav-link text-white" [routerLink]="[ '/watches', 'second' ]">Second Hand</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" routerLink="watches">Accessories</a>
+          <a class="nav-link text-white" [routerLink]="[ '/watches', 'accessories' ]">Accessories</a>
         </li>
       </ul>
     </div>
