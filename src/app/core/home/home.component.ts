@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { WatchesService } from 'src/app/watches/watches.service';
+import { StorageService } from 'src/app/storage/storage.service';
 
 @Component({
   selector: 'app-home',
@@ -8,12 +10,13 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(private router: Router, private route: ActivatedRoute, private httpClient: StorageService) { }
   
 
   ngOnInit() {
   }
   products() {
-   this.router.navigate(['products'], {relativeTo: this.route})
+  this.httpClient.methodGetAll()
+   this.router.navigate(['/watches'], {relativeTo: this.route})
   }
 }

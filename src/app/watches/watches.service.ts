@@ -7,60 +7,7 @@ import { Subject } from 'rxjs';
 })
 export class WatchesService {
   watchChange = new Subject<WatchModel[]>()
-  private watches: WatchModel[] = [
-    new WatchModel(
-      'strep',
-      'ferrari',
-      '830437',
-      'condtion',
-      'silver case',
-      100,
-      {
-        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhOQeq4DgxxNhzxci3Hk-7lf_e3mlWYMAc2hW-ULiOX21wDueX",
-        src1: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2OYYRhi4LfRjpdfSKtLwuiNML1tVkh4uMkgPjj4FGOZMNyh37",
-        src2: "https://cdn.idealo.com/folder/Product/4161/1/4161102/s4_produktbild_gross/fossil-townsman-me1138.jpg"
-      }
-    ),
-    new WatchModel(
-      'strep',
-      'ferrari',
-      '43645646',
-      'condtion',
-      'silver case',
-      100,
-      {
-        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhOQeq4DgxxNhzxci3Hk-7lf_e3mlWYMAc2hW-ULiOX21wDueX",
-        src1: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2OYYRhi4LfRjpdfSKtLwuiNML1tVkh4uMkgPjj4FGOZMNyh37",
-        src2: "https://cdn.idealo.com/folder/Product/4161/1/4161102/s4_produktbild_gross/fossil-townsman-me1138.jpg"
-      }
-    ),
-    new WatchModel(
-      'strep',
-      'ferrari',
-      '43645646',
-      'condtion',
-      'silver case',
-      100,
-      {
-        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhOQeq4DgxxNhzxci3Hk-7lf_e3mlWYMAc2hW-ULiOX21wDueX",
-        src1: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2OYYRhi4LfRjpdfSKtLwuiNML1tVkh4uMkgPjj4FGOZMNyh37",
-        src2: "https://cdn.idealo.com/folder/Product/4161/1/4161102/s4_produktbild_gross/fossil-townsman-me1138.jpg"
-      }
-    ),
-    new WatchModel(
-      'strep',
-      'ferrari',
-      '43645646',
-      'condtion',
-      'silver case',
-      100,
-      {
-        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhOQeq4DgxxNhzxci3Hk-7lf_e3mlWYMAc2hW-ULiOX21wDueX",
-        src1: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2OYYRhi4LfRjpdfSKtLwuiNML1tVkh4uMkgPjj4FGOZMNyh37",
-        src2: "https://cdn.idealo.com/folder/Product/4161/1/4161102/s4_produktbild_gross/fossil-townsman-me1138.jpg"
-      }
-    )
-  ]
+  private watches: WatchModel[] = [];
 
   constructor() { }
 
@@ -71,5 +18,9 @@ export class WatchesService {
     const watch = this.watches[index];
     return watch;
   }
-
+  //set array with new data
+  setWatchesh(newwatches: WatchModel[]) {
+         this.watches = newwatches
+         this.watchChange.next(this.watches.slice())
+  }
 }

@@ -23,7 +23,7 @@ export class WatchDetielComponent implements OnInit, OnDestroy {
    this.subacription = this.route.params.subscribe(params => {
       this.index = +params['id'];
       this.watch = this.watchService.getWatch(this.index);
-      console.log(this.watch.img.src)
+      
     })
     
   }

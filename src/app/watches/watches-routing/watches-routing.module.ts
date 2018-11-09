@@ -7,8 +7,8 @@ import { WatchDetielComponent } from "../watch-detiel/watch-detiel.component";
 
 const watchroutes: Routes = [
   {path: 'watches', component: WatchesComponent, children:[
-  {path: ':type', component: WatchesListComponent},
-  {path: ':type/:id', component: WatchDetielComponent}
+  {path: ':brand', component: WatchesListComponent},
+  {path: ':brand/:id', component: WatchDetielComponent}
  
 ]},
 ] 

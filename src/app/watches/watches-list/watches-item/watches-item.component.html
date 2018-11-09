@@ -2,7 +2,7 @@
 <div class="card card-cascade wider card-ecommerce">
   <!-- Card image -->
   <div class="view view-cascade overlay">
-    <img [src]="watch.img.src" class="card-img-top" alt="sample photo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhOQeq4DgxxNhzxci3Hk-7lf_e3mlWYMAc2hW-ULiOX21wDueX" class="card-img-top" alt="sample photo">
     <a (click)="detiel()">
       <div class="mask rgba-white-slight"></div>
     </a>
@@ -16,15 +16,15 @@
     </a>
     <h4 class="card-title">
       <strong>
-        <a >{{ watch.model }}</a>
+        <a >{{ watch.model.nameModel }}</a>
       </strong>
     </h4>
     <!-- Description -->
-    <p class="card-text">Lorem ipsum dolor{{watch.scopeDelivery}}, consectetur adipisicing minima veniam elit.</p>
+    <p class="card-text">{{watch.model.description}}</p>
     <!-- Card footer -->
     <div class="card-footer px-1">
       <span class="float-left font-weight-bold">
-        <strong>{{ watch.price }}$</strong>
+        <strong>{{ watch.model.price }}$</strong>
       </span>
     </div>
   </div>

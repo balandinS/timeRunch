@@ -1,11 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core/core.module';
 import { WatchesModule } from './watches/watchesModule/watches.module';
 import { AppRouterModule } from './appRoute.module';
+import { StorageService } from './storage/storage.service';
+
 
 
 
@@ -18,9 +22,10 @@ import { AppRouterModule } from './appRoute.module';
     MDBBootstrapModule.forRoot(),
     CoreModule,
     WatchesModule,
-    AppRouterModule
+    AppRouterModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
