@@ -5,7 +5,7 @@ import { WatchesComponent } from './watches/watches.component';
 
 const approutes: Routes = [
     {path: '', component: HomeComponent },
-    {path: 'products', component: WatchesComponent}
+    {path: 'watches', component: WatchesComponent}
 ];
 
 @NgModule({
