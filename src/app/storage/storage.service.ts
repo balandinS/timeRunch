@@ -25,4 +25,14 @@ export class StorageService {
     })
   }
 
+  sendEmail(name, email, message) {
+    const uri = 'http://localhost:3000/contact/send';
+    const obj = {
+      name: name,
+      email: email,
+      message: message,
+    };
+    this.httpClient.post(uri, obj);
+  }
+
 }

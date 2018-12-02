@@ -10,13 +10,15 @@ import { WatchDetielComponent } from '../watch-detiel/watch-detiel.component';
 import { AlsoListComponent } from '../also-list/also-list.component';
 import { AlsoListItemComponent } from '../also-list/also-list-item/also-list-item.component';
 import { ShareModule } from 'src/app/share/share.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     WatchesRoutingModule,
     MDBBootstrapModule,
-    ShareModule
+    ShareModule,
+    FormsModule
   ],
   declarations: [
     WatchesComponent,

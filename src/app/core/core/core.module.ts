@@ -5,6 +5,7 @@ import { HomeComponent } from '../home/home.component';
 import { FooterComponent } from '../footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -14,6 +15,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
   imports: [
     CommonModule,
     RouterModule,
+    FormsModule,
     MDBBootstrapModule
   ],
   declarations: [HeaderComponent, HomeComponent, FooterComponent],

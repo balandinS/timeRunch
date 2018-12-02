@@ -3,3 +3,6 @@ section {
     font-family: 'Roboto', sans-serif;
 }
 
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}

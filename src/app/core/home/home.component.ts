@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { WatchesService } from 'src/app/watches/watches.service';
 import { StorageService } from 'src/app/storage/storage.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,11 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
   products() {
-  this.httpClient.methodGetAll()
+   this.httpClient.methodGetAll()
    this.router.navigate(['/watches'], {relativeTo: this.route})
+  }
+  onSubmit(form: NgForm){
+    const value = form.value;
+    this.httpClient.sendEmail(value.name, value.email, value.message )
   }
 }
