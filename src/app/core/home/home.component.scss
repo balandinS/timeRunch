@@ -6,3 +6,11 @@ section {
 input.ng-invalid.ng-touched {
     border: 1px solid red;
 }
+form {
+    display: relative;
+}
+form span {
+    color: #95a5a6;
+    left: 0;
+
+}

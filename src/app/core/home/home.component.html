@@ -194,6 +194,7 @@
       <form class="text-center" (ngSubmit)="onSubmit(f)"  #f="ngForm">
 
         <!-- Name -->
+        <span *ngIf="!name.valid && name.touched">Please enter valid name</span>
         <input 
         type="text" 
         id="defaultContactFormName" 
@@ -202,9 +203,11 @@
         name="name"
         ngModel
         required
+        #name="ngModel"
         >
-
+       
         <!-- Email -->
+        <span *ngIf="!email.valid && email.touched">Please enter valid email</span>
         <input 
         type="email" 
         id="defaultContactFormEmail" 
@@ -214,7 +217,9 @@
         email
         ngModel
         required
+        #email="ngModel"
         >
+        
 
 
 
@@ -235,7 +240,7 @@
       <!-- Default form contact -->
 
       <div class="text-center text-md-left">
-        <button [disabled] = "!f.valid"  mdbBtn type="submit" color="danger" outline="true" mdbWavesEffect>SEND</button>
+        <button style="cursor: pointer;" [disabled] = "!f.valid"  mdbBtn type="submit" color="danger" outline="true" mdbWavesEffect>SEND</button>
     
       </div>
     </div>
