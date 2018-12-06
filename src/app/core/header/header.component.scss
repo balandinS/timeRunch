@@ -4,3 +4,15 @@
     height: 15rem;
     
 }
+.navbar{
+    position: relative;
+}
+.logo{
+    background: url(../img/logo.png) no-repeat 50% 50%;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 60px;
+    width: 60px;
+}

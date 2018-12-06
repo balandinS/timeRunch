@@ -18,10 +18,10 @@ export class WatchesListComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.httpClient.methodGetAll();
+    this.watches = this.watchservice.getWatches();
     this.subcription = this.watchservice.watchChange.subscribe((watches: WatchModel[]) => {
       this.watches = watches;
     })
-    this.watches = this.watchservice.getWatches();
    this.initReadMore()
   }
   

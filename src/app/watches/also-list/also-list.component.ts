@@ -16,7 +16,8 @@ export class AlsoListComponent implements OnInit {
   constructor(private watchservice: WatchesService) { }
 
   ngOnInit() {
-   this.watches = this.watchservice.getWatches();
+    this.watches = this.watchservice.getWatches();
+    
   }
 
 }

@@ -1,34 +1,9 @@
 <div class="container">
-    <h1>Also Watches:</h1>
+  <h1>Also Watches:</h1>
   <div class="d-flex justify-content-around w-50 p-3">
 
-<app-also-list-item *ngFor="let watch of watches; let i = index "
-[watch]="watch"
-[index]="i"
->
-</app-also-list-item>
+    <app-also-list-item *ngFor="let watch of watches; let i = index " [watch]="watch" [index]="i">
+    </app-also-list-item>
 
+  </div>
 </div>
-</div>
-<nav>
-    <ul class="pagination">
-      <li class="page-item" >
-        <a class="page-link" mdbWavesEffect aria-label="Previous">
-          <span aria-hidden="true">&laquo;</span>
-          <span class="sr-only">Previous</span>
-        </a>
-      </li>
-      <li class="page-item" ><a class="page-link" mdbWavesEffect>1</a></li>
-      <li class="page-item" ><a class="page-link" mdbWavesEffect>2</a></li>
-      <li class="page-item" ><a class="page-link" mdbWavesEffect>3</a></li>
-      <li class="page-item" ><a class="page-link" mdbWavesEffect>4</a></li>
-      <li class="page-item" ><a class="page-link" mdbWavesEffect>5</a></li>
-      <li class="page-item" >
-        <a class="page-link" mdbWavesEffect aria-label="Next">
-          <span aria-hidden="true">&raquo;</span>
-          <span class="sr-only">Next</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-<br>
