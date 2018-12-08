@@ -16,8 +16,9 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     RouterModule,
     FormsModule,
-    MDBBootstrapModule
+    MDBBootstrapModule   /// import style matireal bootstrap.
   ],
+  //Declarations and explore the core components like navbar footer and home page
   declarations: [HeaderComponent, HomeComponent, FooterComponent],
   exports: [HeaderComponent, HomeComponent, FooterComponent]
 })

@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { WatchesService } from 'src/app/watches/watches.service';
 import { StorageService } from 'src/app/storage/storage.service';
 import { NgForm } from '@angular/forms';
+import { promise } from 'protractor';
 
 @Component({
   selector: 'app-home',
@@ -16,12 +17,15 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
-  products() {
-   this.httpClient.methodGetAll()
-   this.router.navigate(['/watches'], {relativeTo: this.route})
-  }
+
+  // send to service data for email
   onSubmit(form: NgForm){
     const value = form.value;
-    this.httpClient.sendEmail(value.name, value.email, value.message )
+    console.log(value)
+    this.httpClient.sendEmail(value.name, value.email, value.message ).subscribe((promise: Promise<any>)=> {
+      promise
+      .then(response => console.log(response))
+      .catch(error => console.error(error))
+    })
   }
 }

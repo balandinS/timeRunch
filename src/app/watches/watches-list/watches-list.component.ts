@@ -3,6 +3,7 @@ import { WatchModel } from '../watche.model';
 import { Subscription } from 'rxjs';
 import { WatchesService } from '../watches.service';
 import { StorageService } from 'src/app/storage/storage.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-watches-list',
@@ -14,10 +15,20 @@ export class WatchesListComponent implements OnInit, OnDestroy {
   load:boolean
   endPoint: number = 3; // the point end for slice
   subcription = new Subscription();
-  constructor(private watchservice: WatchesService, private httpClient: StorageService) { }
+  subcriptionRoute = new Subscription();
+  constructor(
+    private watchservice: WatchesService, 
+    private httpClient: StorageService, 
+    private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.httpClient.methodGetAll();
+    this.subcriptionRoute = this.route.params.subscribe(params => {
+      if(params['brand'] === 'all'){
+        this.httpClient.methodGetAll();
+      } else {
+        this.httpClient.methodGetBrands(params['brand']);
+      }
+    })
     this.watches = this.watchservice.getWatches();
     this.subcription = this.watchservice.watchChange.subscribe((watches: WatchModel[]) => {
       this.watches = watches;
@@ -46,5 +57,6 @@ export class WatchesListComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.subcription.unsubscribe();
+    this.subcriptionRoute.unsubscribe();
   }
 }
