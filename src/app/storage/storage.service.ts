@@ -41,13 +41,13 @@ export class StorageService {
  //method post, send email for contact with us  
   sendEmail(name, email, message) {
     var promise: any;
-    const uri = 'http://localhost:3000/contact/send';
-    const obj = {
+    const uri = 'http://localhost:3000/send';
+    const body = {
       name: name,
       email: email,
       message: message,
     };
-     return  promise = this.httpClient.post(uri, obj);
+   return this.httpClient.post(uri, JSON.stringify(body));
   }
 
 }

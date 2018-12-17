@@ -3,6 +3,7 @@
         <a class="breadcrumb-item" routerLink="">Home</a>
       </nav>
     <section class="text-center my-3">
+      <progress *ngIf="visibaleProgres"></progress>
   <div class="row">
     <div class="col-sm-5 col-md-4 my-2" *ngFor="let watch of watches; let i = index">
         <app-watches-item

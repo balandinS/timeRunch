@@ -22,10 +22,9 @@ export class HomeComponent implements OnInit {
   onSubmit(form: NgForm){
     const value = form.value;
     console.log(value)
-    this.httpClient.sendEmail(value.name, value.email, value.message ).subscribe((promise: Promise<any>)=> {
-      promise
-      .then(response => console.log(response))
-      .catch(error => console.error(error))
-    })
+    this.httpClient.sendEmail(value.name, value.email, value.message ).subscribe(success => {console.log(success)},
+    
+    error => { console.log(error) });
+    form.reset();
   }
 }

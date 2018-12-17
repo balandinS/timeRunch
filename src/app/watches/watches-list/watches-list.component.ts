@@ -12,7 +12,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class WatchesListComponent implements OnInit, OnDestroy {
   watches: WatchModel[];
-  load:boolean
+  load:boolean = false;
+  visibaleProgres: boolean = true;
   endPoint: number = 3; // the point end for slice
   subcription = new Subscription();
   subcriptionRoute = new Subscription();
@@ -27,13 +28,21 @@ export class WatchesListComponent implements OnInit, OnDestroy {
         this.httpClient.methodGetAll();
       } else {
         this.httpClient.methodGetBrands(params['brand']);
+       
       }
     })
     this.watches = this.watchservice.getWatches();
     this.subcription = this.watchservice.watchChange.subscribe((watches: WatchModel[]) => {
-      this.watches = watches;
-    })
+    this.watches = watches;
+    },
+    error => { console.error(error);}
+    )
    this.initReadMore()
+   if(this.watches.length > 0){
+   this.visibaleProgres = false;
+   } else{
+      this.visibaleProgres = true;
+   }
   }
   
   initReadMore() {
@@ -58,5 +67,7 @@ export class WatchesListComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.subcription.unsubscribe();
     this.subcriptionRoute.unsubscribe();
+    this.watches = [];
+    
   }
 }
