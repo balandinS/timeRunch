@@ -12,6 +12,7 @@ export class WatchesService {
   constructor() { }
 
   getWatches() {
+    this.watchChange.next(this.watches.slice())
     return this.watches;
   }
   getWatch(index:number) {

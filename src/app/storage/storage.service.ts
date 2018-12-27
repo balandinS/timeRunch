@@ -38,6 +38,36 @@ export class StorageService {
        this.watchService.setWatchesh(watches);
     })
   }
+
+   ///method get, find watches with accessories from data base
+   methodGetaccessories() {
+    const url = 'http://localhost:3000/watches/special/accessories';
+    this.httpClient.get<WatchModel[]>(url,
+    {
+      observe: 'body',
+      responseType: 'json'
+    }
+    )
+    .subscribe((watches: WatchModel[]) => {
+      console.log(watches)
+       this.watchService.setWatchesh(watches);
+    })
+  }
+
+  ///method get, find watches with secondhand from data base
+  methodGetsecondhand() {
+    const url = 'http://localhost:3000/watches/special/secondhand';
+    this.httpClient.get<WatchModel[]>(url,
+    {
+      observe: 'body',
+      responseType: 'json'
+    }
+    )
+    .subscribe((watches: WatchModel[]) => {
+      console.log(watches)
+       this.watchService.setWatchesh(watches);
+    })
+  }
  //method post, send email for contact with us  
   sendEmail(name, email, message) {
     var promise: any;
